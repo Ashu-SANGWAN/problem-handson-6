@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript handson 6</title>
+  </head>
+  <style>
+    body {
+      padding: 10px;
+      background-color: burlywood;
+    }
+    h3 {
+      color: black;
+    }
+    pre {
+      color: blue;
+    }
+    h2 {
+      font-size: 40px;
+      color: rgb(104, 99, 99);
+    }
+  </style>
+  <body>
+    <h2 align="center">Problem Solving</h2>
+    <h3>Q. 1 Find the Smaller Angle</h3>
+    <pre>
+ 
+var Minimal_Angle = (h, m) => 
+{
+  let hourAngle = (30*h) + (0.5*m);
+  let minsAngle = 6*m;
+  let minimalAngle=0;
+  if(h===12 && m===0)
+  {
+    return 0;
+  }
+  if(hourAngle>minsAngle)
+  {
+    minimalAngle = (hourAngle - minsAngle);
+  }
+  else
+  {
+     minimalAngle = (minsAngle - hourAngle);
+  }
+  return minimalAngle;
+};</pre
+    >
+    <h3>Q.2 Check whether the year is Leap year or not.</h3>
+    <pre>
+ 
+    var Check_Leap = (year) => 
+   {
+     if(year%100===0)
+     {
+       if(year%400===0)
+       {
+         return "Leap Year";
+       }
+       else
+       {
+         return "Non Leap Year";
+       }
+     }
+    else if(year%4===0)
+    {
+      return "Leap Year";
+    }
+     else
+     {
+       return "Non Leap Year";
+     }
+   };
+   </pre
+    >
+    <h3>Q.3 Perfect number Check</h3>
+    <pre>
+ var Perfect_Check = (N) => 
+    {
+      let perfectSum=0;
+      for(let i=0;i < N;i++)
+      {
+        if(N%i===0)
+        {
+          perfectSum+=i;
+        }
+      }
+      if(perfectSum===N)
+      {
+        return "YES";
+      }
+      else
+      {
+        return "NO";
+      }
+    };</pre
+    >
+    <h3>Q.4 Reverse a Number</h3>
+    <pre>
+  
+    let rev =0;
+    
+    let i=0;
+    
+    var Reverse_Number = (N) =>
+    
+    {
+    
+    if (N<10){
+    
+    return N;
+    
+    }
+    
+    else{
+    
+    while(N >0){
+    
+    rem =N%10;
+    
+    rev = rev*10 +rem;
+    
+    N=Math.trunc(N/10);
+    
+    }
+    
+    return rev;
+    
+    }
+    
+    };
+    
+    </pre>
+    <h3>Q.5 Substring check</h3>
+    <pre>
+    var Substring_Check = (S1, S2) => 
+    {
+       let N = S2.length;
+       
+       for(let i=0;i<=(S1.length-N);i++)
+       {
+         if(S1.substring(i,i+N)===S2)
+         {
+           return "YES";
+         }
+       }
+       
+       return "NO";
+    };
+    </pre>
+  </body>
+</html>
